@@ -44,9 +44,9 @@ public class ImovelResource {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Imovel> criar(@Valid @RequestBody Imovel imovel){
-		Long areaTotal = imovel.getAreaTerreno() + imovel.getAreaContruida();
-		Long venalTotal = imovel.getVenalTerreno() + imovel.getVenalConstrucao();
-		Long imposto = venalTotal * imovel.getAliquota();
+		Float areaTotal = imovel.getAreaTerreno() + imovel.getAreaContruida();
+		Float venalTotal = imovel.getVenalTerreno() + imovel.getVenalConstrucao();
+		Float imposto = venalTotal * imovel.getAliquota();
 		imovel.setAreaTotal(areaTotal);
 		imovel.setVenalTotal(venalTotal);
 		imovel.setImposto(imposto);
@@ -65,9 +65,9 @@ public class ImovelResource {
 											@Valid @RequestBody Imovel imovel){
 		Optional<Imovel> salvoImovel = imovelRepository.findById(id);
 		Imovel salvoImovel2 = salvoImovel.get();
-		Long areaTotal = imovel.getAreaTerreno() + imovel.getAreaContruida();
-		Long venalTotal = imovel.getVenalTerreno() + imovel.getVenalConstrucao();
-		Long imposto = venalTotal * imovel.getAliquota();
+		Float areaTotal = imovel.getAreaTerreno() + imovel.getAreaContruida();
+		Float venalTotal = imovel.getVenalTerreno() + imovel.getVenalConstrucao();
+		Float imposto = venalTotal * imovel.getAliquota();
 		imovel.setAreaTotal(areaTotal);
 		imovel.setVenalTotal(venalTotal);
 		imovel.setImposto(imposto);

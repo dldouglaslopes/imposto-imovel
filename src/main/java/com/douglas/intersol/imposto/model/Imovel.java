@@ -22,30 +22,30 @@ public class Imovel {
 	private String endereco;
 	
 	@Column(name = "area_terreno")
-	private Long areaTerreno;
+	private Float areaTerreno;
 	
 	@Column(name = "area_construida")
-	private Long areaContruida;
+	private Float areaContruida;
 	
 	@Column(name = "area_total")
-	private Long areaTotal;
+	private Float areaTotal;
 	
-	private Long aliquota;
+	private Float aliquota;
 	
 	@Column(name = "valor_venal_terreno")
-	private Long venalTerreno;
+	private Float venalTerreno;
 	
 	@Column(name = "valor_venal_construcao")
-	private Long venalConstrucao;
+	private Float venalConstrucao;
 	
 	@Column(name = "valor_venal_total")
-	private Long venalTotal;
+	private Float venalTotal;
 	
 	@Column(name = "aliquota_aplicada")
-	private Long aliquotaAplicada;
+	private Float aliquotaAplicada;
 	
 	@Column(name = "valor_imposto")
-	private Long imposto;
+	private Float imposto;
 
 	public Integer getId() {
 		return id;
@@ -71,75 +71,75 @@ public class Imovel {
 		this.endereco = endereco;
 	}
 
-	public Long getAreaTerreno() {
+	public Float getAreaTerreno() {
 		return areaTerreno;
 	}
 
-	public void setAreaTerreno(Long areaTerreno) {
+	public void setAreaTerreno(Float areaTerreno) {
 		this.areaTerreno = areaTerreno;
 	}
 
-	public Long getAreaContruida() {
+	public Float getAreaContruida() {
 		return areaContruida;
 	}
 
-	public void setAreaContruida(Long areaContruida) {
+	public void setAreaContruida(Float areaContruida) {
 		this.areaContruida = areaContruida;
 	}
 
-	public Long getAreaTotal() {
+	public Float getAreaTotal() {
 		return areaTotal;
 	}
 
-	public void setAreaTotal(Long areaTotal) {
+	public void setAreaTotal(Float areaTotal) {
 		this.areaTotal = areaTotal;
 	}
 
-	public Long getAliquota() {
+	public Float getAliquota() {
 		return aliquota;
 	}
 
-	public void setAliquota(Long aliquota) {
+	public void setAliquota(Float aliquota) {
 		this.aliquota = aliquota;
 	}
 
-	public Long getVenalTerreno() {
+	public Float getVenalTerreno() {
 		return venalTerreno;
 	}
 
-	public void setVenalTerreno(Long venalTerreno) {
+	public void setVenalTerreno(Float venalTerreno) {
 		this.venalTerreno = venalTerreno;
 	}
 
-	public Long getVenalConstrucao() {
+	public Float getVenalConstrucao() {
 		return venalConstrucao;
 	}
 
-	public void setVenalConstrucao(Long venalConstrucao) {
+	public void setVenalConstrucao(Float venalConstrucao) {
 		this.venalConstrucao = venalConstrucao;
 	}
 
-	public Long getVenalTotal() {
+	public Float getVenalTotal() {
 		return venalTotal;
 	}
 
-	public void setVenalTotal(Long venalTotal) {
+	public void setVenalTotal(Float venalTotal) {
 		this.venalTotal = venalTotal;
 	}
 
-	public Long getAliquotaAplicada() {
+	public Float getAliquotaAplicada() {
 		return aliquotaAplicada;
 	}
 
-	public void setAliquotaAplicada(Long aliquotaAplicada) {
+	public void setAliquotaAplicada(Float aliquotaAplicada) {
 		this.aliquotaAplicada = aliquotaAplicada;
 	}
 
-	public Long getImposto() {
+	public Float getImposto() {
 		return imposto;
 	}
 
-	public void setImposto(Long imposto) {
+	public void setImposto(Float imposto) {
 		this.imposto = imposto;
 	}
 
