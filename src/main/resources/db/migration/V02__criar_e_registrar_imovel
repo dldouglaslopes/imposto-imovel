@@ -1,0 +1,22 @@
+CREATE TABLE imovel(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	proprietario_id INT NOT NULL,
+	endereco VARCHAR(250),
+	area_terreno DECIMAL(10,2),
+	area_construida DECIMAL(10,2),
+	area_total DECIMAL(10,2),
+	aliquota DECIMAL(10,2),
+	valor_venal_terreno DECIMAL(10,2),
+	valor_venal_construcao DECIMAL(10,2),
+	valor_venal_total DECIMAL(10,2),
+	aliquota_aplicada DECIMAL(20,2),
+	valor_imposto DECIMAL(10,2),
+	FOREIGN KEY (proprietario_id) REFERENCES proprietario(id)
+)ENGINE=InnoDB default CHARSET=utf8 
+
+INSERT INTO imovel (endereco, proprietario_id, area_terreno, area_construida, area_total, aliquota, valor_venal_terreno, valor_venal_construcao, valor_venal_total, aliquota_aplicada, valor_imposto) 
+			values ( 'Rua A', 2, 10000.00, 5000.00, 15000.00, 0.5, 1000.00, 100.00, 1100.00, 0.5, 550.00);
+INSERT INTO imovel (endereco, proprietario_id, area_terreno, area_construida, area_total, aliquota, valor_venal_terreno, valor_venal_construcao, valor_venal_total, aliquota_aplicada, valor_imposto) 
+			values ( 'Rua B', 1, 1000.00, 1000.00, 2000.00, 0.5, 100.00, 100.00, 200.00, 0.5, 100.00);
+INSERT INTO imovel (endereco, proprietario_id, area_terreno, area_construida, area_total, aliquota, valor_venal_terreno, valor_venal_construcao, valor_venal_total, aliquota_aplicada, valor_imposto) 
+			values ( 'Rua C', 3, 500.00, 500.00, 1000.00, 0.5, 100.00, 200.00, 300.00, 0.5, 150.00);
