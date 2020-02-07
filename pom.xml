@@ -51,10 +51,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-		</dependency>
 		
 		<!-- para converter as datas do banco para localdate -->
 		<dependency>
