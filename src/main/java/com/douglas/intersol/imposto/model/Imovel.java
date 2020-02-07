@@ -25,7 +25,7 @@ public class Imovel {
 	private Float areaTerreno;
 	
 	@Column(name = "area_construida")
-	private Float areaContruida;
+	private Float areaConstruida;
 	
 	@Column(name = "area_total")
 	private Float areaTotal;
@@ -79,12 +79,12 @@ public class Imovel {
 		this.areaTerreno = areaTerreno;
 	}
 
-	public Float getAreaContruida() {
-		return areaContruida;
+	public Float getAreaConstruida() {
+		return areaConstruida;
 	}
 
-	public void setAreaContruida(Float areaContruida) {
-		this.areaContruida = areaContruida;
+	public void setAreaConstruida(Float areaConstruida) {
+		this.areaConstruida = areaConstruida;
 	}
 
 	public Float getAreaTotal() {

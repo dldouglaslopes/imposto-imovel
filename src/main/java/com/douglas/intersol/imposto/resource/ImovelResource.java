@@ -9,6 +9,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.douglas.intersol.imposto.model.Imovel;
 import com.douglas.intersol.imposto.repository.ImovelRepository;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/imoveis")
 public class ImovelResource {
@@ -44,7 +46,7 @@ public class ImovelResource {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Imovel> criar(@Valid @RequestBody Imovel imovel){
-		Float areaTotal = imovel.getAreaTerreno() + imovel.getAreaContruida();
+		Float areaTotal = imovel.getAreaTerreno() + imovel.getAreaConstruida();
 		Float venalTotal = imovel.getVenalTerreno() + imovel.getVenalConstrucao();
 		Float imposto = venalTotal * imovel.getAliquota();
 		imovel.setAreaTotal(areaTotal);
@@ -65,7 +67,7 @@ public class ImovelResource {
 											@Valid @RequestBody Imovel imovel){
 		Optional<Imovel> salvoImovel = imovelRepository.findById(id);
 		Imovel salvoImovel2 = salvoImovel.get();
-		Float areaTotal = imovel.getAreaTerreno() + imovel.getAreaContruida();
+		Float areaTotal = imovel.getAreaTerreno() + imovel.getAreaConstruida();
 		Float venalTotal = imovel.getVenalTerreno() + imovel.getVenalConstrucao();
 		Float imposto = venalTotal * imovel.getAliquota();
 		imovel.setAreaTotal(areaTotal);
